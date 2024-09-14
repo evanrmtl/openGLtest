@@ -10,7 +10,7 @@
 
 
 void init() {
-    glClearColor(1.0,1.0,0.0,1.0);
+    glClearColor(0.0,0.0,0.0,1.0);
 }
 
 int main(int argc, char *argv[]) {
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     glutCreateWindow("first openGL test");
 
     glutDisplayFunc(display);
-
+    glutReshapeFunc(reshape);
     init();
 
     glutMainLoop();
@@ -32,12 +32,29 @@ int main(int argc, char *argv[]) {
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+
+    //draw
+    glBegin(GL_QUADS);
+
+    glVertex2f(2.5,-2.5);
+    glVertex2f(-2.5,-2.5);
+    glVertex2f(-2.5,2.5);
+    glVertex2f(2.5,2.5);
+
+    glEnd();
 
     glFlush();
 }
 
 void reshape(int w, int y) {
     glViewport(0,0,w,y);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluOrtho2D(-10.0,10.0,-10.0,10.0);
+    glMatrixMode(GL_MODELVIEW);
+
+
 }
 
 
