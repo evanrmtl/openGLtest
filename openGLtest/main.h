@@ -5,14 +5,16 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "WIndow.h"
 
-void printMap(const char map[10][14]);
+#define W_WIDTH 1600
+#define W_HEIGHT 900
+#define W_XPOSITION 150
+#define W_YPOSITION 90
 
-typedef struct Coordonnees Coordonnees;
-struct Coordonnees{
-    int x;
-    int y;
-};
+void init();
+void reshape(int,int);
+void display();
+void createDisplay();
+
 
 #endif //MAIN_H

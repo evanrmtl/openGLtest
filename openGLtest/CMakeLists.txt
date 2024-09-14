@@ -1,15 +1,11 @@
-cmake_minimum_required(VERSION 3.29)
-project(rayCasting C)
+cmake_minimum_required(VERSION 3.10)
+project(openGLtest)
 
 set(CMAKE_C_STANDARD 11)
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
-add_executable(rayCasting main.c
-        main.h
-        WIndow.c
-        WIndow.h)
+add_executable(openGLtest main.c)
 
-# Lier les bibliothèques OpenGL, GLUT et GLU directement
-target_link_libraries(rayCasting PRIVATE OpenGL::GL GLUT::GLUT GLU)
+target_link_libraries(openGLtest OpenGL::GL GLUT::GLUT)

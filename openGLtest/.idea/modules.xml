@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/rayCasting.iml" filepath="$PROJECT_DIR$/.idea/rayCasting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/openGLtest.iml" filepath="$PROJECT_DIR$/.idea/openGLtest.iml" />
     </modules>
   </component>
 </project>

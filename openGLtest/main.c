@@ -9,31 +9,35 @@
 #include <GL/glut.h>
 
 
+void init() {
+    glClearColor(1.0,1.0,0.0,1.0);
+}
+
 int main(int argc, char *argv[]) {
     glutInit(&argc, argv);
-    iWindow();
+
+    glutInitDisplayMode(GLUT_RGB);
+    glutInitWindowPosition(W_XPOSITION,W_YPOSITION);
+    glutInitWindowSize(W_WIDTH,W_HEIGHT);
+    glutCreateWindow("first openGL test");
+
     glutDisplayFunc(display);
+
+    init();
+
     glutMainLoop();
-
-
-    char map[10][14] ={
-        "111111111111",
-        "100000000001",
-        "100000000001",
-        "111110001111",
-        "100000001111",
-        "100000001111",
-        "101111111111",
-        "100000000001",
-        "100000000001",
-        "111111111111"
-    };
-
 
     return 0;
 }
 
+void display() {
+    glClear(GL_COLOR_BUFFER_BIT);
 
-void printMap(const char map[10][14]) {
-
+    glFlush();
 }
+
+void reshape(int w, int y) {
+    glViewport(0,0,w,y);
+}
+
+
