@@ -14,7 +14,7 @@
 void init();
 void reshape(int,int);
 void display();
-void createDisplay();
+void timer(int);
 
 
 #endif //MAIN_H
